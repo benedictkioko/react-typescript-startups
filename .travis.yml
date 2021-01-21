@@ -8,11 +8,5 @@ services:
 before_script: pip install docker-compose
 
 script:
-  - docker-compose run sh -c "python manage.py test && falke8" -f ./server
-
-notifications:
-  email:
-    recipients:
-      - kiokobenedict@gmail.com
-    on_success: never
-    on_failure: always
+  - cd server
+  - docker-compose run sh -c "python manage.py test && falke8"
