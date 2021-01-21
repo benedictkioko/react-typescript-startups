@@ -5,13 +5,11 @@ python:
 services:
   - docker
 
-before_script: 
-  - cd server
-  - pip install docker-compose
+before_script: pip install docker-compose
 
 script:
   - cd server
-  - python src/manage.py test && falke8
+  - python manage.py test && falke8
 
 notifications:
   email:
