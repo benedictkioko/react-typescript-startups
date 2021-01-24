@@ -13,3 +13,19 @@ services:
 
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
+
+    environment:
+      - DB_HOST=db
+      - DB_NAME=startups
+      - DB_USER=postgres
+      - DB_PASS=secretphrase
+
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_DB=startups
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secretphrase
