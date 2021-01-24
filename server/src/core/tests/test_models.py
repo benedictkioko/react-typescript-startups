@@ -7,7 +7,7 @@ class ModelTests(TestCase):
     def test_create_user_with_email_successful(self):
         """Succesful creation of a user with email"""
 
-        email = "admin@tstartups.com"
+        email = "test@tstartups.com"
         password = "Password123"
 
         user = get_user_model().objects.create_user(email=email, password=password)
@@ -17,7 +17,7 @@ class ModelTests(TestCase):
 
     def test_new_email_normalized(self):
         """ Test normalization for new user email """
-        email = "admin@STARTUP.COM"
+        email = "test@STARTUPS.COM"
         password = "Password123"
 
         user = get_user_model().objects.create_user(email=email, password=password)
@@ -31,7 +31,7 @@ class ModelTests(TestCase):
 
     def test_create_new_superuser(self):
         """ Test creating a new superuser """
-        email = "superuser@startups.com"
+        email = "test@startups.com"
         password = "password123"
 
         user = get_user_model().objects.create_superuser(email=email, password=password)
