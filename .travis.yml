@@ -4,8 +4,11 @@ python:
 
 services:
   - docker
+  - postgresql
 
-before_script: pip install docker-compose
+before_script:
+  - pip install docker-compose
+  - psql -c 'create database startups;' -U postgres
 
 script:
   - cd server
