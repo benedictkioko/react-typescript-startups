@@ -1,5 +1,5 @@
 FROM python:3.8-alpine
-MAINTAINER Benedict
+LABEL maintainer="Benedict"
 
 ENV PYTHONUNBUFFERED 1
 
@@ -17,6 +17,3 @@ COPY ./src /src
 
 RUN adduser -D user
 USER user
-
-
-
