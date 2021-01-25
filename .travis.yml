@@ -4,16 +4,13 @@ python:
 
 services:
   - docker
-  - postgresql
 
-before_script:
-  - pip install docker-compose
-  - psql -c 'create database startups;' -U postgres
+before_script: pip install docker-compose
 
 script:
   - cd server
   - pip install -r requirements.txt
-  - python src/manage.py test
+  - docker-compose run app sh -c "python manage.py test && flake8"
 
 notifications:
   email:
