@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "user",
     "startups",
     "subjects",
+    "terms",
 ]
 
 MIDDLEWARE = [
