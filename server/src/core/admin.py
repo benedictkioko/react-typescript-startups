@@ -19,3 +19,9 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Student)
+admin.site.register(models.Subject)
+admin.site.register(models.Term)
+admin.site.register(models.Group)
+admin.site.register(models.Score)
+admin.site.register(models.Leader)
