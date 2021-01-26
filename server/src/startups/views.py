@@ -3,7 +3,8 @@ from rest_framework import generics, authentication, permissions
 from django.contrib.auth.models import User
 
 from .serializers import StudentSerializer
-from core.models import Student, Subject, Term, Group, Score, Leader
+
+from core.models import Student
 
 
 class StudentsList(generics.ListCreateAPIView):

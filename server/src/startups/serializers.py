@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from core.models import Student, Subject, Term, Group, Score, Leader
+from core.models import Student
 
 
 class StudentSerializer(ModelSerializer):
