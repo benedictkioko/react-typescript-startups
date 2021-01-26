@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "subjects",
     "terms",
     "groups",
+    "scores",
 ]
 
 MIDDLEWARE = [
