@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "terms",
     "groups",
     "scores",
+    "leaders",
 ]
 
 MIDDLEWARE = [

@@ -8,7 +8,7 @@ from core.models import Score
 
 
 class ScoreList(generics.ListCreateAPIView):
-    """Creating and viewing of groups"""
+    """Creating and viewing of scores"""
 
     serializer_class = ScoreSerializer
     permission_classes = (permissions.IsAuthenticated,)
@@ -21,7 +21,7 @@ class ScoreList(generics.ListCreateAPIView):
 
 
 class ScoreDetailView(generics.RetrieveUpdateDestroyAPIView):
-    """Creating and viewing of groups"""
+    """Creating and viewing of scores"""
 
     serializer_class = ScoreSerializer
     permission_classes = (permissions.IsAuthenticated,)

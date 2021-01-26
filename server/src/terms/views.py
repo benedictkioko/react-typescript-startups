@@ -8,7 +8,7 @@ from core.models import Term
 
 
 class TermList(generics.ListCreateAPIView):
-    """Creating and viewing od terms"""
+    """Creating and viewing of terms"""
 
     serializer_class = TermSerializer
     permission_classes = (permissions.IsAuthenticated,)

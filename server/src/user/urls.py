@@ -8,5 +8,5 @@ app_name = "auth"
 urlpatterns = [
     path("register/", views.CreateUserView.as_view(), name="create"),
     path("login/", views.CreateTokenView.as_view(), name="token"),
-    path("me/", views.ManageUserView.as_view(), name="me"),
+    path("profile/update/", views.ManageUserView.as_view(), name="profile"),
 ]
