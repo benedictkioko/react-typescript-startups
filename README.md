@@ -12,7 +12,7 @@ Tail winds CSS will be used for Styling
 
 ## Docker
 
-React app, Django and posture are set to run in their own containers.
+React app, Django and postgre are set to run in their own containers.
 
 ## CI/CD
 
@@ -20,9 +20,9 @@ Run continuous integrations with Travis CI to automatically run linting and unit
 
 ## Database
 
-Postgere
+PostgreSQL
 
-## Django Rest Api Back-end
+## Django Rest API Back-end
 
 **Overview**
 
@@ -41,3 +41,7 @@ These are endpoints that Django App will export:
 | GET     | /api/student/:id | retrieve a Student by `:id` |
 | PUT     | /api/student/:id | update a Student by `:id`   |
 | DELETE  | /api/student/:id | delete a Student by `:id`   |
+
+## API Documentation
+
+[drf-yasg] - Yet another Swagger is used generate schemas for the Django Rest Frame API.
