@@ -8,7 +8,7 @@ from core.models import Student
 
 
 class StudentsList(generics.ListCreateAPIView):
-    """Creating and viewing od students"""
+    """Creating and viewing of students"""
 
     serializer_class = StudentSerializer
     # authentication_classes = (authentication.TokenAuthentication,)
@@ -22,7 +22,7 @@ class StudentsList(generics.ListCreateAPIView):
 
 
 class StudentsDetailView(generics.RetrieveUpdateDestroyAPIView):
-    """Creating and viewing od students"""
+    """Fetching, updating and deleting students"""
 
     serializer_class = StudentSerializer
     # authentication_classes = (authentication.TokenAuthentication,)

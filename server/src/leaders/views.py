@@ -21,7 +21,7 @@ class LeaderList(generics.ListCreateAPIView):
 
 
 class LeaderDetailView(generics.RetrieveUpdateDestroyAPIView):
-    """Creating and viewing of leaders"""
+    """Fetching, updating and deleting leaders"""
 
     serializer_class = LeaderSerializer
     permission_classes = (permissions.IsAuthenticated,)

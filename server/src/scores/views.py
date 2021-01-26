@@ -21,7 +21,7 @@ class ScoreList(generics.ListCreateAPIView):
 
 
 class ScoreDetailView(generics.RetrieveUpdateDestroyAPIView):
-    """Creating and viewing of scores"""
+    """Fetching, updating and deleting scores"""
 
     serializer_class = ScoreSerializer
     permission_classes = (permissions.IsAuthenticated,)

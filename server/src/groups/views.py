@@ -21,7 +21,7 @@ class GroupList(generics.ListCreateAPIView):
 
 
 class GroupDetailView(generics.RetrieveUpdateDestroyAPIView):
-    """Creating and viewing of groups"""
+    """Fetching, updating and deleting of groups"""
 
     serializer_class = GroupSerializer
     permission_classes = (permissions.IsAuthenticated,)

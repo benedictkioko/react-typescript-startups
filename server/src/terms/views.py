@@ -21,7 +21,7 @@ class TermList(generics.ListCreateAPIView):
 
 
 class TermDetailView(generics.RetrieveUpdateDestroyAPIView):
-    """Creating and viewing of terms"""
+    """Fetching, updating and deleting terms"""
 
     serializer_class = TermSerializer
     permission_classes = (permissions.IsAuthenticated,)

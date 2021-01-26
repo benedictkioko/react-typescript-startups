@@ -8,7 +8,7 @@ from core.models import Subject
 
 
 class SubjectList(generics.ListCreateAPIView):
-    """Creating and viewing od subjects"""
+    """Creating and viewing of subjects"""
 
     serializer_class = SubjectSerializer
     permission_classes = (permissions.IsAuthenticated,)
@@ -21,7 +21,7 @@ class SubjectList(generics.ListCreateAPIView):
 
 
 class SubjectDetailView(generics.RetrieveUpdateDestroyAPIView):
-    """Creating and viewing od subjects"""
+    """Fetching, updating and deleting subjects"""
 
     serializer_class = SubjectSerializer
     permission_classes = (permissions.IsAuthenticated,)
