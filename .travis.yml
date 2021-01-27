@@ -5,13 +5,11 @@ python:
 services:
   - docker
 
-before_script: 
-  - pip install docker-compose
+before_script: pip install docker-compose
 
 script:
   - cd server
   - pip install -r requirements.txt
-  - docker-compose up --build
   - docker-compose run app sh -c "python manage.py test && flake8"
 
 notifications:
