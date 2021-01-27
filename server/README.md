@@ -28,6 +28,12 @@ Run tests
 docker-compose run --rm app sh -c "python manage.py test && flake8"
 ```
 
+Create a superuser
+
+```
+docker-compose run --rm app sh -c "python manage.py createsuperuser"
+```
+
 Now, run your project
 
 ```
