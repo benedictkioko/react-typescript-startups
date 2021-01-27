@@ -22,6 +22,12 @@ Build your images
 docker-compose build
 ```
 
+Now, run your project
+
+```
+docker-compose up
+```
+
 Run tests
 
 ```
@@ -32,12 +38,6 @@ Create a superuser
 
 ```
 docker-compose run --rm app sh -c "python manage.py createsuperuser"
-```
-
-Now, run your project
-
-```
-docker-compose up
 ```
 
 ## License
