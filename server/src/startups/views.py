@@ -11,7 +11,7 @@ class StudentsList(generics.ListCreateAPIView):
     """Creating and viewing of students"""
 
     serializer_class = StudentSerializer
-    # authentication_classes = (authentication.TokenAuthentication,)
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
@@ -25,7 +25,7 @@ class StudentsDetailView(generics.RetrieveUpdateDestroyAPIView):
     """Fetching, updating and deleting students"""
 
     serializer_class = StudentSerializer
-    # authentication_classes = (authentication.TokenAuthentication,)
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
     lookup_field = "StudentId"
 

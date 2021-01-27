@@ -11,6 +11,7 @@ class GroupList(generics.ListCreateAPIView):
     """Creating and viewing of groups"""
 
     serializer_class = GroupSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
@@ -24,6 +25,7 @@ class GroupDetailView(generics.RetrieveUpdateDestroyAPIView):
     """Fetching, updating and deleting of groups"""
 
     serializer_class = GroupSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
     lookup_field = "GroupId"
 

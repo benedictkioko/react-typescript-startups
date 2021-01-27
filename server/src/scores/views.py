@@ -11,6 +11,7 @@ class ScoreList(generics.ListCreateAPIView):
     """Creating and viewing of scores"""
 
     serializer_class = ScoreSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
@@ -24,6 +25,7 @@ class ScoreDetailView(generics.RetrieveUpdateDestroyAPIView):
     """Fetching, updating and deleting scores"""
 
     serializer_class = ScoreSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
     lookup_field = "ScoreId"
 

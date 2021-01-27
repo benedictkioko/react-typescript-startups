@@ -11,6 +11,7 @@ class TermList(generics.ListCreateAPIView):
     """Creating and viewing of terms"""
 
     serializer_class = TermSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
@@ -24,6 +25,7 @@ class TermDetailView(generics.RetrieveUpdateDestroyAPIView):
     """Fetching, updating and deleting terms"""
 
     serializer_class = TermSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
     lookup_field = "TermId"
 

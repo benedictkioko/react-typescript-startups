@@ -11,6 +11,7 @@ class LeaderList(generics.ListCreateAPIView):
     """Creating and viewing of leaders"""
 
     serializer_class = LeaderSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
@@ -24,6 +25,7 @@ class LeaderDetailView(generics.RetrieveUpdateDestroyAPIView):
     """Fetching, updating and deleting leaders"""
 
     serializer_class = LeaderSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
     lookup_field = "LeaderId"
 

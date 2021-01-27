@@ -11,6 +11,7 @@ class SubjectList(generics.ListCreateAPIView):
     """Creating and viewing of subjects"""
 
     serializer_class = SubjectSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
@@ -24,6 +25,7 @@ class SubjectDetailView(generics.RetrieveUpdateDestroyAPIView):
     """Fetching, updating and deleting subjects"""
 
     serializer_class = SubjectSerializer
+    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
     lookup_field = "SubjectId"
 
