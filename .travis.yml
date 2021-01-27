@@ -7,11 +7,11 @@ services:
 
 before_script: 
   - pip install docker-compose
-  - docker-compose up --build
 
 script:
   - cd server
   - pip install -r requirements.txt
+  - docker-compose up --build
   - docker-compose run app sh -c "python manage.py test && flake8"
 
 notifications:
