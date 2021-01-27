@@ -46,7 +46,9 @@ These are endpoints that Django App will export:
 
 [drf-yasg] - Yet another Swagger is used generate schemas for the Django Rest Frame API.
 
-### Students API Documentation
+#### Output
 
-<img src="images/swagger.png" alt="swagger header">
-<img src="images/swagger2.png" alt="swagger header">
+**Added screenshots**
+
+![swagger api header](images/swagger.png?raw=true "Header")
+![swagger student api](images/swagger2.png?raw=true "Student API")
