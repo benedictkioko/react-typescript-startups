@@ -8,7 +8,7 @@ from rest_framework import status
 # constants
 CREATE_USER_URL = reverse("auth:create")
 TOKEN_URL = reverse("auth:token")
-ME_URL = reverse("auth:me")
+ME_URL = reverse("auth:profile")
 
 
 def create_user(**params):
