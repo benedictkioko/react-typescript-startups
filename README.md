@@ -1,6 +1,7 @@
 # React (Redux), and Django REST Framework application with Docker and Travis CI
 
 [![Build Status](https://travis-ci.org/benedictkioko/react-typescript-startups.svg?branch=main)](https://travis-ci.org/benedictkioko/react-typescript-startups)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## React (Redux)
 

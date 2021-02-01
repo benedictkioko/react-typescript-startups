@@ -22,7 +22,7 @@ Build your images
 docker-compose build
 ```
 
-Now, run your project
+Run your project
 
 ```
 docker-compose up
@@ -39,6 +39,11 @@ Create a superuser
 ```
 docker-compose run --rm app sh -c "python manage.py createsuperuser"
 ```
+
+The app runs in port 8000
+
+Open [http://localhost:8000/api](http://localhost:8000/api) to view swagger documentation on the browser.
+
 
 ## License
 
