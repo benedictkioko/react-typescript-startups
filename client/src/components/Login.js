@@ -2,16 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { FaUser, FaLock } from "react-icons/fa";
-
-async function loginUser(credentials) {
-  return fetch("http://localhost:8000/api/auth/login/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(credentials),
-  }).then((data) => data.json());
-}
+import loginUser from "../api/fetchUser";
 
 export default function Login({ setToken }) {
   const [email, setEmail] = useState();
