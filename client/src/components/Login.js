@@ -1,24 +1,47 @@
-import React from 'react'
+import React,  { useState } from 'react'
+import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { FaUser, FaLock } from 'react-icons/fa'
 
-export default function Login() {
+export default function Login({ setToken}) {
+
+    const [username, setUserName] = useState();
+    const [password, setPassword] = useState();
+
     return (
-        <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
-                <h1 className="text-center text=4xl test-indigo-900 font-display font-semibold lg:text-center xl:text-5xl">Log In</h1>
-                <div mt-12>
-                    <form>
-                        <label>
-                            <div className="text-lg font-bold text-gray-700 tracking-wide">Email</div>
-                            <input className="w-full text-lg py-2 border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="mail@startups.com"/>
-                        </label>
-                        <label>
-                            <div className="text-lg font-bold text-gray-700 tracking-wide">Password</div>
-                            <input className="w-full text-lg py-2 border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Enter your Password" />
-                        </label>
-                        <div className="mt-10">
-                            <button className="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide font-semibold font-display focus:outline-none focus:shodow-outline hover:bg-indigo-600 shadow-lg" type="submit">Login</button>
-                        </div>
-                    </form>
+        <div className="w-full h-screen flex items-center justify-center">
+            <form className="fw-full md:w-1/3 bg-white rounded-lg">
+                <div className="flex font-bold justify-center mt-6">
+                    <span className="h-20 w-20">
+                        <LazyLoadImage src="../../public/avatar.svg" alt=""/>
+                    </span>
                 </div>
+                <h2 class="text-3xl text-center text-gray-700 mb-4 py-5">Sign In</h2>
+                <div className="px-12 pb-10">
+                    <div className="w-full mb-2">
+                        <div className="flex items-center">
+                            <FaUser className='ml-3 fill-current text-gray-400 text-xs z-10' />
+                            <input type='text' placeholder="Email" className="-mx-6 px-8  w-full border rounded px-3 py-2 text-gray-700 focus:outline-none focus:border-indigo-500" onChange={e => setUserName(e.target.value)} />
+                        </div>
+                    </div>
+                    <div className="w-full mb-2">
+                        <div className="flex items-center">
+                        <FaLock className='ml-3 fill-current text-gray-400 text-xs z-10'/>
+                        <input type='text' placeholder="Password" className="-mx-6 px-8 w-full border rounded px-3 py-2 text-gray-700 focus:outline-none focus:border-indigo-500" onChange={e => setPassword(e.target.value)} />
+
+                        </div>
+                    </div>
+                   
+                    <div className="mt-10">
+                        <button className="w-full py-2 rounded-full bg-green-600 text-gray-100 focus:outline-none focus:shodow-outline hover:bg-indigo-600 shadow-lg" type="submit">Login</button>
+                    </div>
+                </div>
+            </form>
         </div>
+           
     )
+}
+
+Login.propTypes = {
+    setToken: PropTypes.func.isRequired
 }
