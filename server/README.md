@@ -44,6 +44,26 @@ The app runs in port 8000
 
 Open [http://localhost:8000/api](http://localhost:8000/api) to view swagger documentation on the browser.
 
+## Using the DRF API Browser
+
+Install [`ModHeader`](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj) Extension for Chrome
+
+To login with the user created previously;
+
+Head to the login endpoint for an AuthToken [http://localhost:8000/api/auth/login](http://localhost:8000/api/auth/login) 
+
+Sample Token 
+
+```
+{
+    "key": "99def123123123123d88e15771e3a8b43e71f"
+}
+```
+
+Then set the authorization token as shown
+
+
+![Authorization Token](../images/Screenshot.png?raw=true "TokenAuth")
 
 ## License
 
