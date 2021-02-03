@@ -56,7 +56,7 @@ Sample Token
 
 ```
 {
-    "key": "99def123123123123d88e15771e3a8b43e71f"
+    "key": "af66cdf8d4853d53f9ec760170b661130bf114ea"
 }
 ```
 
