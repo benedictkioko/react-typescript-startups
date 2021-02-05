@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { FaUser, FaLock } from "react-icons/fa";
-import loginUser from "../api/fetchUser";
+import loginUser from "../api/FetchUser";
 
 export default function Login({ setToken }) {
   const [email, setEmail] = useState();
